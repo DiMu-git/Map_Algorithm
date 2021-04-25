@@ -6,3 +6,24 @@
 //
 
 #include "Visualization.h"
+int out_data(FILE *file, MapList m){
+    file = fopen("/Users/mudi/Desktop/data.txt", "w");
+    if(file==NULL) {
+        printf("ERROR!\n");
+        return -1;
+    }
+    for(int i=0;i<m.vexnum;i++){
+        if(m.adjList[i].firstedge!=NULL){
+            EdgeNode *p = m.adjList[i].firstedge;
+            while(p!=NULL){
+                fprintf(file, "%lf %lf\n",m.adjList[i].data.lon,m.adjList[i].data.lat);
+        fprintf(file, "%lf %lf\n",m.adjList[p->adjvex].data.lon,m.adjList[p->adjvex].data.lat);
+                fprintf(file, "\n");
+                p=p->next;
+        }
+            
+    }
+    }
+    return 0;
+}
+

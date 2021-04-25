@@ -8,6 +8,10 @@
 #ifndef Visualization_h
 #define Visualization_h
 
+#include "Data.h"
 #include <stdio.h>
+int out_data(FILE *file, MapList m);
+
+
 
 #endif /* Visualization_h */

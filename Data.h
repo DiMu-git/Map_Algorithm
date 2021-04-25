@@ -30,7 +30,7 @@ typedef struct{
     int vexnum, arcnum;
 }MapList;
 
-int load_map (FILE *file, MapList m);
+int load_map (FILE *file, MapList *m);
 
 int get_details (MapList m,int n);
 
