@@ -12,6 +12,6 @@
 #include <stdio.h>
 int out_data(FILE *file, MapList m);
 
-
+int result_output(int data[], MapList m);
 
 #endif /* Visualization_h */

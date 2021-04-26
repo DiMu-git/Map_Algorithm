@@ -21,9 +21,10 @@ int out_data(FILE *file, MapList m){
                 fprintf(file, "\n");
                 p=p->next;
         }
-            
     }
     }
     return 0;
 }
+
+
 

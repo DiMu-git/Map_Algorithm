@@ -8,9 +8,11 @@
 #include <stdio.h>
 #include "Data.h"
 #include "Visualization.h"
+#include "Algorithm.h"
 int main(int argc, const char * argv[]) {
-    FILE * file1;
+    FILE *file1;
     FILE *file2;
+    FILE *file3;
     MapList *map = (MapList*)malloc(sizeof(MapList));
     load_map(file1, map);
     for(int i=0; i<map->vexnum;i++){
@@ -30,5 +32,10 @@ int main(int argc, const char * argv[]) {
     }
     printf("%i\n",map->arcnum);
     out_data(file2, *map);
+    printf("Please input the start point and the end point:");
+    int x,y;
+    scanf("%i %i",&x,&y);
+    Dijkstra(x, y,*map);
+    
     return 0;
 }
