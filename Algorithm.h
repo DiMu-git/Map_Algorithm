@@ -12,8 +12,9 @@
 #include <stdlib.h>
 #include "Data.h"
 
-void Dijkstra(int x, int y, MapList m);
+//
+void Dijkstra(int x, int y, MapList m, FILE *file);
 
-void printRoad(int path[], int y);
+void printRoad(int path[], int y, FILE *file,MapList m);
 
 #endif /* Algorithm_h */

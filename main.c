@@ -10,11 +10,11 @@
 #include "Visualization.h"
 #include "Algorithm.h"
 int main(int argc, const char * argv[]) {
-    FILE *file1;
-    FILE *file2;
-    FILE *file3;
+    FILE *filein;
+    FILE *fileout;
+    FILE *fileresult;
     MapList *map = (MapList*)malloc(sizeof(MapList));
-    load_map(file1, map);
+    load_map(filein, map);
     for(int i=0; i<map->vexnum;i++){
         EdgeNode *p;
         p=map->adjList[i].firstedge;
@@ -31,11 +31,11 @@ int main(int argc, const char * argv[]) {
         printf("\n");
     }
     printf("%i\n",map->arcnum);
-    out_data(file2, *map);
+    out_data(fileout, *map);
     printf("Please input the start point and the end point:");
     int x,y;
     scanf("%i %i",&x,&y);
-    Dijkstra(x, y,*map);
+    Dijkstra(x, y,*map, fileresult);
     
     return 0;
 }

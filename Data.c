@@ -21,18 +21,7 @@ EdgeNode *create_edge(int adjecx, EdgeType weight){
     e->next = NULL;
     return e;
 }
-//int add_edge(MapList m, int index,EdgeNode *e){
-//    EdgeNode *p = m.adjList[index].firstedge;
-//    if(p==NULL){
-//        m.adjList[index].firstedge = e;
-//        return 0;
-//    }
-//    else{
-//        m.adjList[index].firstedge = e;
-//        e->next = p;
-//        }
-//    return -1;
-//}
+
 int index_check(long int i, MapList m){
     for(int j = 0; j<m.vexnum;j++){
         if(i == m.adjList[j].data._id) return j;
