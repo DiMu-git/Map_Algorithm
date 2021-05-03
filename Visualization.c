@@ -6,10 +6,10 @@
 //
 
 #include "Visualization.h"
-int out_data(FILE *file, MapList m){
-    file = fopen("/Users/mudi/Desktop/data.txt", "w");
+int out_data(FILE *file, MapList m,char* filename){
+    file = fopen(filename, "w");
     if(file==NULL) {
-        printf("ERROR!\n");
+        printf("Can't find file!\n");
         return -1;
     }
     for(int i=0;i<m.vexnum;i++){

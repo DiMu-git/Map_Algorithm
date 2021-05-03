@@ -9,5 +9,9 @@
 #define Interface_h
 
 #include <stdio.h>
+#include "Data.h"
+#include "Visualization.h"
+#include "Algorithm.h"
 
+void main_interface();
 #endif /* Interface_h */

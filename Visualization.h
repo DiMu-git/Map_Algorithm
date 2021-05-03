@@ -10,8 +10,8 @@
 
 #include "Data.h"
 #include <stdio.h>
-int out_data(FILE *file, MapList m);
+int out_data(FILE *file, MapList m, char* filename);
 
-int result_output(int data[], MapList m);
+int result_output(int data[], MapList m, char* filename);
 
 #endif /* Visualization_h */

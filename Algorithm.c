@@ -9,7 +9,7 @@
 
 void Dijkstra(int x, int y, MapList m, FILE *file){
     file = fopen("/Users/mudi/Desktop/out.txt", "w");
-    int i,j,k;
+    int i,k;
     int min;
     int u = -1;
     EdgeType dis[m.vexnum];
@@ -53,10 +53,11 @@ void Dijkstra(int x, int y, MapList m, FILE *file){
         }
     }
     
-    printf("最短路径值为:%lf\n",dis[y]);
-    printf("依次经过的路径为:");
+    printf("The shortest distance is: %lf\n",dis[y]);
+    printf("The route is:");
     printf("%i ",x);
     printRoad(path, y,file,m);
+    printf("\n");
     fclose(file);
 }
 
@@ -70,9 +71,8 @@ void printRoad(int path[], int target, FILE *file,MapList m){
     
     printRoad(path, path[target],file,m);
     
-    printf("%i ",path[target]);
+    printf("%i ",target);
     fprintf(file, "%lf %lf\n",m.adjList[path[target]].data.lon,m.adjList[path[target]].data.lat);
-    printf("%i        ",target);
     fprintf(file, "%lf %lf\n",m.adjList[target].data.lon,m.adjList[target].data.lat);
     fprintf(file, "\n");
 }
